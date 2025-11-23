@@ -1,3 +1,1 @@
-An example mod for Necesse.
-
-Check out the [modding wiki page](https://necessewiki.com/Modding) for more.
+Disenchanter's trash dump feature is not needed.

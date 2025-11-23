@@ -5,12 +5,12 @@ plugins {
 // Change the values below this to your mods values
 // To change the project name, edit the settings.gradle file
 
-project.ext.modID = "fair.examplemod" // The unique id of your mod. Must be all lowercase and cannot use special characters.
-project.ext.modName = "Example Mod" // The display name of your mod.
+project.ext.modID = "s1v.disenchanting.patch" // The unique id of your mod. Must be all lowercase and cannot use special characters.
+project.ext.modName = "Disenchanting-Patch" // The display name of your mod.
 project.ext.modVersion = "1.0" // Your current builds version. Must follow the xx.xx... format.
-project.ext.gameVersion = "1.0.2" // The target game version.
-project.ext.modDescription = "Just an example mod" // Short description of what your mod is.
-project.ext.author = "Fair" // Your name
+project.ext.gameVersion = "1.0.3" // The target game version.
+project.ext.modDescription = "Disenchanter's trash dump feature is not needed." // Short description of what your mod is.
+project.ext.author = "s1v" // Your name
 
 /**
  * When setting clientside to true, it means servers do not need this mod for clients to connect and vice versa.
@@ -24,11 +24,11 @@ project.ext.clientside = false
  * Dependencies define the default load order of mods
  * Uncomment and configure these if your mod has dependencies
  */
-//project.ext.modDependencies = ["other.modid1", "other.modid2"]
+project.ext.modDependencies = ["snoobinoob.disenchanting"]
 //project.ext.modOptionalDependencies = ["optional.modid1", "optional.modid2"]
 
 // The path to the games install directory
-def gameDirectory = "C:/Program Files (x86)/Steam/steamapps/common/Necesse"
+def gameDirectory = "E:/Game/steamapps/common/Necesse"
 
 // =================================================
 // ========== DO NOT EDIT BELOW THIS LINE ==========
@@ -66,7 +66,7 @@ dependencies {
     implementation files(gameDirectory + "/Necesse.jar")
     implementation fileTree(gameDirectory + "/lib/")
     implementation fileTree("./mods/") // Add all mods located in local mods folder
-
+    implementation files('libs/Disenchanting-1.0.2-8.0.jar')
     // Add any third party library dependencies here. Remember to use libDepends, so that they will be added to your jar on build
     // These are some examples:
 //    libDepends group: 'com.google.guava', name: 'guava', version: '31.1-jre'
